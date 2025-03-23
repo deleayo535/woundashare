@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, User, LogOut } from 'lucide-react';
+import { User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import {
@@ -12,12 +12,9 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 
-type HeaderProps = {
-  toggleSidebar: () => void;
-};
-
-const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
+const Header: React.FC = () => {
   const { user, logout, isAdmin } = useAuth();
   
   const getInitials = (name: string) => {
@@ -33,15 +30,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleSidebar}
-              className="mr-4 hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <Menu className="h-5 w-5" />
-            </Button>
-            <Link to="/" className="flex items-center">
+            <SidebarTrigger />
+            <Link to="/" className="flex items-center ml-4">
               <span className="text-primary font-bold text-xl">Wounda</span>
               <span className="text-foreground font-bold text-xl">Share</span>
             </Link>
