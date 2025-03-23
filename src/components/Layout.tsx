@@ -16,9 +16,9 @@ const Layout: React.FC = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header toggleSidebar={toggleSidebar} />
-      <div className="flex-1 flex">
+      <div className="flex-1 flex relative">
         <Sidebar open={sidebarOpen || !isMobile} toggleSidebar={toggleSidebar} />
-        <main className={`flex-1 transition-all duration-300 ease-in-out p-6 ${!isMobile && sidebarOpen ? 'ml-64' : 'ml-0'}`}>
+        <main className={`flex-1 transition-all duration-300 ease-in-out p-6 ${isMobile ? 'w-full' : (sidebarOpen ? 'ml-64' : 'ml-0')}`}>
           <div className="max-w-7xl mx-auto animate-fade-in">
             <Outlet />
           </div>

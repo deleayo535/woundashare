@@ -64,18 +64,18 @@ const Sidebar: React.FC<SidebarProps> = ({ open, toggleSidebar }) => {
       {/* Overlay for mobile */}
       {isMobile && open && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40"
+          className="fixed inset-0 bg-black/50 z-30"
           onClick={toggleSidebar}
         />
       )}
       
       <aside 
         className={cn(
-          "bg-sidebar dark:bg-sidebar fixed inset-y-0 left-0 z-50",
+          "bg-sidebar dark:bg-sidebar h-[calc(100vh-4rem)] z-30",
           "border-r border-sidebar-border transition-all duration-300 ease-in-out",
-          "w-64 pt-16 pb-4 flex flex-col", 
-          open ? "translate-x-0" : "-translate-x-full",
-          !isMobile && open ? "shadow-lg" : ""
+          "w-64 pb-4 flex flex-col", 
+          isMobile ? "fixed top-16 left-0" : "sticky top-0",
+          open ? "translate-x-0" : (isMobile ? "-translate-x-full" : "w-0 opacity-0")
         )}
       >
         <div className="px-4 py-2 flex justify-between items-center">
