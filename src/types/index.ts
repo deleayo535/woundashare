@@ -30,3 +30,8 @@ export interface Medication {
   frequency: string;
   duration: string;
 }
+
+export interface UserCredentials {
+  email: string;
+  password: string;
+}
