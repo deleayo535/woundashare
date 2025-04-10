@@ -14,6 +14,7 @@ import MyReports from "./pages/MyReports";
 import ReportDetail from "./pages/ReportDetail";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminReportDetail from "./pages/AdminReportDetail";
+import AdminUsers from "./pages/AdminUsers";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/reports/:id" element={<ReportDetail />} />
               <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
               <Route path="/admin/reports/:id" element={<AdminRoute><AdminReportDetail /></AdminRoute>} />
+              <Route path="/admin/users" element={<AdminRoute><AdminUsers /></AdminRoute>} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
