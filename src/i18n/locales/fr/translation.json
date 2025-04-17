@@ -26,5 +26,31 @@
     "edit": "Modifier",
     "search": "Rechercher",
     "filter": "Filtrer"
+  },
+  "index": {
+    "hero": {
+      "title": "WoundaShare",
+      "subtitle": "Partagez et suivez en toute sécurité les progrès de la cicatrisation des plaies avec des professionnels de la santé"
+    },
+    "features": {
+      "title": "Fonctionnalités Clés",
+      "upload": {
+        "title": "Téléchargements Faciles",
+        "description": "Téléchargez rapidement des images de plaies pour évaluation et suivi"
+      },
+      "security": {
+        "title": "Partage Sécurisé",
+        "description": "Transmission et stockage de données cryptées pour la confidentialité des patients"
+      },
+      "collaboration": {
+        "title": "Collaboration d'Équipe",
+        "description": "Permettre à plusieurs professionnels de la santé d'examiner et de commenter"
+      }
+    },
+    "cta": {
+      "title": "Prêt à commencer?",
+      "subtitle": "Créez votre compte maintenant pour commencer à documenter les soins des plaies",
+      "button": "Inscrivez-vous Maintenant"
+    }
   }
 }

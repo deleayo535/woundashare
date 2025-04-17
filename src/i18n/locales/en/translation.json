@@ -26,5 +26,31 @@
     "edit": "Edit",
     "search": "Search",
     "filter": "Filter"
+  },
+  "index": {
+    "hero": {
+      "title": "WoundaShare",
+      "subtitle": "Securely share and track wound healing progress with healthcare professionals"
+    },
+    "features": {
+      "title": "Key Features",
+      "upload": {
+        "title": "Easy Uploads",
+        "description": "Quickly upload images of wounds for assessment and tracking"
+      },
+      "security": {
+        "title": "Secure Sharing",
+        "description": "Encrypted data transmission and storage for patient confidentiality"
+      },
+      "collaboration": {
+        "title": "Team Collaboration",
+        "description": "Allow multiple healthcare professionals to review and comment"
+      }
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Create your account now to begin documenting wound care",
+      "button": "Sign Up Now"
+    }
   }
 }

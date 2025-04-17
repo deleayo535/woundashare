@@ -26,5 +26,31 @@
     "edit": "Editar",
     "search": "Buscar",
     "filter": "Filtrar"
+  },
+  "index": {
+    "hero": {
+      "title": "WoundaShare",
+      "subtitle": "Comparta y siga de forma segura el progreso de curación de heridas con profesionales sanitarios"
+    },
+    "features": {
+      "title": "Características Principales",
+      "upload": {
+        "title": "Cargas Sencillas",
+        "description": "Suba rápidamente imágenes de heridas para evaluación y seguimiento"
+      },
+      "security": {
+        "title": "Compartición Segura",
+        "description": "Transmisión y almacenamiento de datos encriptados para confidencialidad del paciente"
+      },
+      "collaboration": {
+        "title": "Colaboración en Equipo",
+        "description": "Permita que varios profesionales sanitarios revisen y comenten"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "subtitle": "Cree su cuenta ahora para comenzar a documentar el cuidado de heridas",
+      "button": "Regístrese Ahora"
+    }
   }
 }
