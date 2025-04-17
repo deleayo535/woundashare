@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
 import { 
   Home, 
   Upload, 
@@ -26,6 +27,7 @@ import {
 const AppSidebar: React.FC = () => {
   const location = useLocation();
   const { isAdmin } = useAuth();
+  const { t } = useTranslation();
   
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -44,26 +46,26 @@ const AppSidebar: React.FC = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/dashboard")} tooltip="Dashboard">
+                <SidebarMenuButton asChild isActive={isActive("/dashboard")} tooltip={t('navigation.dashboard')}>
                   <Link to="/dashboard">
                     <Home />
-                    <span>Dashboard</span>
+                    <span>{t('navigation.dashboard')}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/upload-report")} tooltip="Upload Report">
+                <SidebarMenuButton asChild isActive={isActive("/upload-report")} tooltip={t('navigation.uploadReport')}>
                   <Link to="/upload-report">
                     <Upload />
-                    <span>Upload Report</span>
+                    <span>{t('navigation.uploadReport')}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/my-reports")} tooltip="My Reports">
+                <SidebarMenuButton asChild isActive={isActive("/my-reports")} tooltip={t('navigation.myReports')}>
                   <Link to="/my-reports">
                     <Clipboard />
-                    <span>My Reports</span>
+                    <span>{t('navigation.myReports')}</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -77,18 +79,18 @@ const AppSidebar: React.FC = () => {
             <SidebarGroupContent>
               <SidebarMenu>
                 <SidebarMenuItem>
-                  <SidebarMenuButton asChild isActive={isActive("/admin")} tooltip="All Reports">
+                  <SidebarMenuButton asChild isActive={isActive("/admin")} tooltip={t('navigation.allReports')}>
                     <Link to="/admin">
                       <ClipboardList />
-                      <span>All Reports</span>
+                      <span>{t('navigation.allReports')}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  <SidebarMenuButton asChild isActive={isActive("/admin/users")} tooltip="Manage Users">
+                  <SidebarMenuButton asChild isActive={isActive("/admin/users")} tooltip={t('navigation.manageUsers')}>
                     <Link to="/admin/users">
                       <UserCog />
-                      <span>Manage Users</span>
+                      <span>{t('navigation.manageUsers')}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -100,7 +102,7 @@ const AppSidebar: React.FC = () => {
       <SidebarFooter>
         <SidebarSeparator />
         <div className="px-3 py-2 text-xs text-muted-foreground">
-          © 2023 WoundaShare
+          {t('app.footer')}
         </div>
       </SidebarFooter>
     </Sidebar>

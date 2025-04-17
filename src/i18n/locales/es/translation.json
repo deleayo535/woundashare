@@ -1,0 +1,30 @@
+
+{
+  "app": {
+    "name": "WoundaShare",
+    "footer": "© 2023 WoundaShare"
+  },
+  "navigation": {
+    "dashboard": "Tablero",
+    "uploadReport": "Subir Informe",
+    "myReports": "Mis Informes",
+    "allReports": "Todos los Informes",
+    "manageUsers": "Gestionar Usuarios"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "myAccount": "Mi Cuenta"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "filter": "Filtrar"
+  }
+}

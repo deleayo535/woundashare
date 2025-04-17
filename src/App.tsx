@@ -19,6 +19,9 @@ import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 
+// Import i18n configuration
+import './i18n';
+
 const queryClient = new QueryClient();
 
 const App = () => (

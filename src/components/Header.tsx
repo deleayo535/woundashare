@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
+import { useTranslation } from 'react-i18next';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,9 +14,11 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SidebarTrigger } from '@/components/ui/sidebar';
+import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const { user, logout, isAdmin } = useAuth();
+  const { t } = useTranslation();
   
   const getInitials = (name: string) => {
     return name
@@ -38,6 +41,8 @@ const Header: React.FC = () => {
           </div>
           
           <div className="flex items-center space-x-4">
+            <LanguageSelector />
+            
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -68,7 +73,7 @@ const Header: React.FC = () => {
                   <DropdownMenuItem asChild>
                     <Link to="/dashboard" className="cursor-pointer flex items-center">
                       <User className="mr-2 h-4 w-4" />
-                      <span>My Account</span>
+                      <span>{t('auth.myAccount')}</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
@@ -77,17 +82,17 @@ const Header: React.FC = () => {
                     className="text-red-600 dark:text-red-400 cursor-pointer"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
-                    <span>Log out</span>
+                    <span>{t('auth.logout')}</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <div className="flex space-x-2">
                 <Button asChild variant="ghost">
-                  <Link to="/login">Login</Link>
+                  <Link to="/login">{t('auth.login')}</Link>
                 </Button>
                 <Button asChild>
-                  <Link to="/register">Sign Up</Link>
+                  <Link to="/register">{t('auth.signup')}</Link>
                 </Button>
               </div>
             )}
